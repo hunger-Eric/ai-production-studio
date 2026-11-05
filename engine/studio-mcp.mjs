@@ -11,6 +11,7 @@ import { productionApply, productionFeedback, productionNext, stageInputs } from
 import { animationPlan, animationDispatch, animationDelivery } from './animation-dispatch.mjs';
 import { earshotCandidates, earshotMix, earshotPlanInput, earshotMixInput } from './earshot.mjs';
 import { publicationPrepare, publicationInput } from './publication.mjs';
+import { visualTrial, visualTrialInputs } from './visual-reference-trial.mjs';
 
 const id = z.string().regex(/^[a-z0-9][a-z0-9-]{0,63}$/);
 const sha = z.string().regex(/^[a-f0-9]{64}$/);
@@ -24,7 +25,8 @@ const checkpoint = { ...run, stage, taskSha256: sha };
 
 async function main() {
   const { values } = parseArgs({ options: { workspace: { type: 'string' }, 'authorize-run': { type: 'string' },
-    'animate-run': { type: 'string' }, 'animate-retry-dispatch': { type: 'string' } } });
+    'animate-run': { type: 'string' }, 'animate-retry-dispatch': { type: 'string' },
+    'visual-trial-run': { type: 'string' }, 'visual-trial-retry-dispatch': { type: 'string' } } });
   check(values.workspace && isAbsolute(values.workspace), '启动 MCP 时须提供 --workspace <已初始化仓库的绝对路径>');
   const root = await rootAt(values.workspace);
   const workspace = await studio.workspaceInfo(root);
@@ -32,6 +34,13 @@ async function main() {
   const authorizedRun = values['authorize-run'];
   const animationRun = values['animate-run'];
   const animationRetry = values['animate-retry-dispatch'];
+  const visualRun = values['visual-trial-run'];
+  const visualRetry = values['visual-trial-retry-dispatch'];
+  check(!visualRetry || (visualRun && sha.safeParse(visualRetry).success), '试做重试必须绑定原派发 SHA');
+  if (visualRun) {
+    check(workspace.mode === 'production', '夹具仓库禁止真实动画作者请求');
+    await studio.loadRun(root, slug(visualRun));
+  }
   check(!animationRetry || (animationRun && sha.safeParse(animationRetry).success), '动画重试授权必须绑定任务及原派发 SHA');
   if (animationRun) {
     check(workspace.mode === 'production', '夹具仓库禁止真实动画作者请求');
@@ -134,6 +143,18 @@ async function main() {
         check(runId === animationRun, '此任务未授权动画作者请求');
         return animationDispatch(root, runId, animationRetry);
       });
+  }
+  if (visualRun) {
+    tool('visual_trial_inputs', '读取已交付原片的可选段、真实字幕时间轴和当前 Obsidian 动画参考正文。',
+      {}, readOnly, () => visualTrialInputs(root, visualRun));
+    tool('visual_trial_generate', '为原片的一段登记你选中的 Obsidian 参考文件名及本片的具体画法，交真实动画作者并用 Remotion 生成同段对照预览。',
+      { segment: z.number().int().min(1).max(24), references: z.array(z.string().min(1).max(100)).min(1).max(3),
+        design: z.string().trim().min(1).max(6000) },
+      { ...writeOnce, openWorldHint: true }, choice => visualTrial(root, visualRun, choice));
+    tool('visual_trial_recover', '仅从已保存的完整作者响应恢复本机渲染，不会再次请求作者。',
+      {}, writeOnce, () => visualTrial(root, visualRun));
+    if (visualRetry) tool('visual_trial_retry', '按明确授权仅重试一次原选段及原画法，优先复用已有完整作者响应。',
+      {}, { ...writeOnce, openWorldHint: true }, () => visualTrial(root, visualRun, undefined, visualRetry));
   }
   tool('animation_commit', '核对全部顺序交件及作者身份后生成完整粗剪。',
     { ...run, taskSha256: sha }, writeOnce, async ({ runId, taskSha256 }) => {

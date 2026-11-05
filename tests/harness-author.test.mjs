@@ -24,4 +24,21 @@ test('author transport selects High, disables general tools, and resumes the sam
   const patch=JSON.parse(await readFile(join(a,'harness-patch.json'),'utf8'));
   assert.equal(patch.find(row=>row.id==='tool-skill').disabled,true);
   assert.equal(patch.find(row=>row.id==='tool-pwsh').disabled,true);
+  assert.equal((await readFile(join(a,'author-stream.txt'),'utf8')),JSON.stringify(first.visual));
+  const dispatch=JSON.parse(await readFile(join(a,'prompt-intent.json'),'utf8'));
+  assert.equal(dispatch.sessionId,first.evidence.sessionId);
+  assert.equal(dispatch.reasoningSelection,'high');
+  const interrupted=join(root,'interrupted');
+  await mkdir(interrupted);
+  let saved=false;
+  await assert.rejects(invokeHarnessAuthor({
+    ...common,attemptDir:interrupted,prompt:'interrupt-after-chunk',saveResponse:()=>{saved=true;}
+  }),/退出/);
+  assert.match(await readFile(join(interrupted,'author-stream.txt'),'utf8'),/只用于离线测试/);
+  assert.equal(saved,false);
+  let completed;
+  const accepted=join(root,'accepted');
+  await mkdir(accepted);
+  const output=await invokeHarnessAuthor({...common,attemptDir:accepted,saveResponse:result=>{completed=result;}});
+  assert.deepEqual(completed,output);
 });

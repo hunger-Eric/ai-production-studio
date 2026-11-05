@@ -18,6 +18,10 @@ for await (const line of createInterface({input:process.stdin})) {
       if(params.sessionId!==sessionId) throw new Error('unexpected prompt recipient');
       reply({method:'session/update',params:{sessionId,update:{sessionUpdate:'agent_message_chunk',
         content:{type:'text',text:JSON.stringify({title:'只用于离线测试',scenes:[]})}}}});
+      if(params.prompt[0].text==='interrupt-after-chunk') {
+        await new Promise(resolve=>process.stdout.write('',resolve));
+        process.exit(2);
+      }
       reply({id,result:{stopReason:'end_turn'}}); break;
   }
 }

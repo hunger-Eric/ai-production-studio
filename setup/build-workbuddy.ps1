@@ -10,6 +10,7 @@ $scripts = Join-Path $skill 'scripts'
 $references = Join-Path $skill 'references'
 New-Item -ItemType Directory -Path $scripts,$references | Out-Null
 Copy-Item -LiteralPath (Join-Path $project 'hosts/workbuddy/SKILL.md') -Destination $skill
+Copy-Item -LiteralPath (Join-Path $project 'LICENSE'),(Join-Path $project 'THIRD_PARTY_NOTICES.md') -Destination $skill
 Copy-Item -LiteralPath (Join-Path $project 'hosts/workbuddy/studio.mjs') -Destination $scripts
 Copy-Item -LiteralPath (Join-Path $project 'hosts/workbuddy/usage.md') -Destination $references
 Copy-Item -LiteralPath (Join-Path $project 'hosts/deepseek-harness/studio.cordis.yml') -Destination $references

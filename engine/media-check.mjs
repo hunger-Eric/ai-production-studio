@@ -6,6 +6,9 @@ import { promisify } from 'node:util';
 import { check, now } from './store.mjs';
 
 const exec = promisify(execFile);
+export function mediaPython() {
+  return process.env.STUDIO_MEDIA_PYTHON?.trim() || (process.platform === 'darwin' ? 'python3' : 'python');
+}
 export async function fingerprint(path) {
   const sha = createHash('sha256');
   for await (const chunk of createReadStream(path)) sha.update(chunk);

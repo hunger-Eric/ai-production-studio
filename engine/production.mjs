@@ -3,7 +3,7 @@ import { isAbsolute, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { z } from 'zod/v4';
 import { body, check, encode, get, hash, inside, now, record, slug } from './store.mjs';
-import { fingerprint, mediaCheck, mediaTool } from './media-check.mjs';
+import { fingerprint, mediaCheck, mediaPython, mediaTool } from './media-check.mjs';
 import { loadRun, writeBoundFeedback } from './studio.mjs';
 
 const stages = ['align', 'picture', 'sound', 'preview', 'review', 'delivery'];
@@ -134,7 +134,7 @@ async function execute(root, task, input, scratch, inputSha256) {
     const plan = join(scratch, 'plan.json');
     const aligned = join(scratch, 'captions.json');
     await writeFile(plan, encode({ beats: [{ beat_id: 'narration', narration: task.narration, phrases: input.phrases }] }));
-    await tool('python', [fileURLToPath(new URL('./python/audio_caption_alignment.py', import.meta.url)),
+    await tool(mediaPython(), [fileURLToPath(new URL('./python/audio_caption_alignment.py', import.meta.url)),
       '--audio', audio, '--plan', plan, '--output', aligned, '--duration-ms', String(durationMs), '--model-file', modelPath], scratch);
     const result = JSON.parse(await readFile(aligned, 'utf8'));
     check(result.audio.sha256 === task.audio.sha256 && result.script.sha256 === hash(task.narration) &&

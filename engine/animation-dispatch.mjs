@@ -3,7 +3,7 @@ import { isAbsolute, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { z } from 'zod/v4';
 import { check, encode, ensure, get, hash, inside, now, record, slug } from './store.mjs';
-import { fingerprint, mediaTool } from './media-check.mjs';
+import { fingerprint, mediaPython, mediaTool } from './media-check.mjs';
 import { productionNext } from './production.mjs';
 import { authorRoute, invokeHarnessAuthor } from './harness-author.mjs';
 
@@ -78,7 +78,7 @@ async function finish(root,runId,plan,segment,lease,visual,host) {
   const tmp=join(attempt,stem+'.mp4');
   const font=process.env.STUDIO_ANIMATION_FONT;
   check(font && isAbsolute(font),'需要配置动画中文字体 STUDIO_ANIMATION_FONT');
-  await mediaTool('python',[writer,await inside(root,source),tmp,font],300000,attempt);
+  await mediaTool(mediaPython(),[writer,await inside(root,source),tmp,font],300000,attempt);
   const {stdout}=await mediaTool('ffprobe',['-v','error','-show_entries','stream=nb_frames,width,height,r_frame_rate',
     '-of','json',tmp],60000);
   const [info,extra]=JSON.parse(stdout).streams;

@@ -1,0 +1,14 @@
+.local/
+workspaces/
+node_modules/
+dist/
+coverage/
+artifacts/
+outputs/
+logs/
+.env
+.env.*
+!.env.example
+*.log
+__pycache__/
+.venv/

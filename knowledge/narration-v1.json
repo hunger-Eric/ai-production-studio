@@ -1,0 +1,90 @@
+{
+  "version": "narration.v1",
+  "nodes": {
+    "business": {
+      "title": "企业、受众与品牌",
+      "required": true
+    },
+    "capabilities": {
+      "title": "真实能力、做法与交付物",
+      "required": true
+    },
+    "cases": {
+      "title": "案例与证据",
+      "required": false
+    },
+    "research": {
+      "title": "选题与研究要求",
+      "required": false
+    },
+    "narration": {
+      "title": "方向、口播与表达要求",
+      "required": false
+    },
+    "audio": {
+      "title": "口播声音、音乐及音效要求",
+      "required": false
+    },
+    "animation": {
+      "title": "动画及视觉要求",
+      "required": false
+    },
+    "review": {
+      "title": "整片审看要求",
+      "required": false
+    },
+    "delivery": {
+      "title": "封面与交付要求",
+      "required": false
+    }
+  },
+  "stages": {
+    "topic": {
+      "executor": "owner",
+      "nodes": [
+        "business",
+        "capabilities",
+        "research"
+      ],
+      "guide": "从客户真实能力、做法与交付物出发，选定受众会在意的一个工作问题与解题研究方向。说明能力依据、现有障碍及题目范围；只有客户同意或已授权 owner 选择的题进入正式研究。"
+    },
+    "research": {
+      "executor": "owner",
+      "nodes": [
+        "business",
+        "capabilities",
+        "cases",
+        "research"
+      ],
+      "guide": "实际阅读相关资料并查证需求情境、现有做法、关键衔接与工作结果。交付完整研究正文：具体情境、所选客户能力原文与来源、必要事实、可核查来源及证据限制。区分案例、假设和真实客户成果。"
+    },
+    "direction": {
+      "executor": "owner",
+      "nodes": [
+        "business",
+        "capabilities",
+        "cases",
+        "narration"
+      ],
+      "guide": "基于冻结研究选定本条最值得理解的一个业务认识、用来说明它的真实证据和本次范围。明确受众、观看期待和取舍；不代写口播、预设段落或追加镜头要求。"
+    },
+    "draft": {
+      "executor": "gemini",
+      "nodes": [
+        "business",
+        "capabilities",
+        "cases",
+        "narration"
+      ],
+      "guide": "按所选方向和已经查证的研究完成一版完整可朗读的中文口播。独立选择材料、组织吸引力、叙事节奏和完整收尾。开头接住观看期待，按理解需要用事实和例子；能力由具体判断和做法体现，价值由实际工作变化体现。不要发明事实、客户成果或购买意愿，不套销售模板。仅输出口播正文，不写旁白标签、时间、镜头和说明。"
+    },
+    "edit": {
+      "executor": "gemini",
+      "nodes": [
+        "business",
+        "narration"
+      ],
+      "guide": "在表达编辑范围内使用附带的 human-writing 原文。保留已成立的事实、信息、必要解释、顺序、推进与收尾作用。只删赘词或合并完全同义表达，有据时最小纠错；不得另立观点、删内容段、提前结束或补做研究。仅输出修改后的口播正文。"
+    }
+  }
+}

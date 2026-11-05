@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "video-platform-social-upload"
+version = "0.1.0"
+description = "Project-local Douyin, Bilibili, YouTube, and WeChat Channels uploader"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+  "google-api-python-client>=2.179,<3",
+  "google-auth>=2.40,<3",
+  "google-auth-oauthlib>=1.2,<2",
+  "loguru==0.7.3",
+  "opencv-python==4.13.0.92",
+  "patchright==1.58.2",
+  "requests==2.32.4",
+  "segno==1.6.6",
+]
+
+[project.scripts]
+sau = "sau_cli:main"
+
+[tool.setuptools]
+py-modules = ["conf", "sau_cli"]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["uploader*", "utils*"]
+
+[tool.setuptools.package-data]
+utils = ["stealth.min.js"]

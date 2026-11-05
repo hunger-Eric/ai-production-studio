@@ -1,0 +1,1385 @@
+{
+  "earshot_commit": "925ebe56a1b755e5d354ab642bb8f344440cfa9c",
+  "cinetic_commit": "ecfa6605de1adb9345ce937724810dc32267d068",
+  "files": [
+    {
+      "root": "earshot",
+      "path": ".gitattributes",
+      "sha256": "fcd2a7297199bade90c3cede2b7fb63a28961b990eac6f421a0f9d401fdb89eb"
+    },
+    {
+      "root": "earshot",
+      "path": ".gitignore",
+      "sha256": "711854948ea391a59fc54f57856c7d433020f8a8da2b44290d66d2dfcea34292"
+    },
+    {
+      "root": "earshot",
+      "path": "CHANGELOG.md",
+      "sha256": "ec1453dec8767711ec1a607fcd4ff94587648ec43105d27ac277b7557f367106"
+    },
+    {
+      "root": "earshot",
+      "path": "docs/CREDITS_FIT.md",
+      "sha256": "14c3e327982530a58ad9a889123a6236842517d94080a0a04dfaff7121651e2e"
+    },
+    {
+      "root": "earshot",
+      "path": "docs/DESIGN.md",
+      "sha256": "23fff5196c3dcecdf3f5bc79f05c5ac51ecce89afdc9e4e1a45b3993b28bd0ab"
+    },
+    {
+      "root": "earshot",
+      "path": "docs/FIT.md",
+      "sha256": "daf134094535d2740a0479da53dff74461579486d3f3feb8856fea6e2e973595"
+    },
+    {
+      "root": "earshot",
+      "path": "docs/FORGE_V2.md",
+      "sha256": "9d0770702b883dfc003218993336cd8b79c31a481793b989aeb7b8a0d9d37a42"
+    },
+    {
+      "root": "earshot",
+      "path": "docs/history/FORGE_V2_LOG.md",
+      "sha256": "73b2640e85ccdfb21c24d93434f7f417004773640f09c17fac6b18a1ce8aaa10"
+    },
+    {
+      "root": "earshot",
+      "path": "docs/INTEGRATION.md",
+      "sha256": "4fe23b568d42ae0b849162e7a6df9dbc854e79ac122b9f0fc8d139e758bd5843"
+    },
+    {
+      "root": "earshot",
+      "path": "docs/launch-video-sound.md",
+      "sha256": "a09c3e808e71916e1469afb182132b363c4a28891ebd9accc1002b693a6682a1"
+    },
+    {
+      "root": "earshot",
+      "path": "docs/LIMITS.md",
+      "sha256": "0a95da40cbbbb11601481a65db44b5c27dc4a48aeef7fed3d56a105c1a72d415"
+    },
+    {
+      "root": "earshot",
+      "path": "docs/media/launch_frames.png",
+      "sha256": "0534071630cddfc1bd624f3e6e044970c836080a469129a8988e7e32f4b5d7a4"
+    },
+    {
+      "root": "earshot",
+      "path": "docs/media/launch_sheet.png",
+      "sha256": "cc49f68ef48566de0757f825b28b199acf0cc1d91be758f707a19966a0425b73"
+    },
+    {
+      "root": "earshot",
+      "path": "docs/motion-sfx-study.md",
+      "sha256": "72601c5bc3f8268a6e80d5fe05ed49870cd78b441011bbd184340cce4890d5d6"
+    },
+    {
+      "root": "earshot",
+      "path": "docs/motion-sfx-techniques.md",
+      "sha256": "d864de77dd611a5bd4d9236d07cf30074524c44891f3b5d3bf966a44f0ed4c05"
+    },
+    {
+      "root": "earshot",
+      "path": "docs/SFX.md",
+      "sha256": "9a8646856f41a48d0224046c49d54a1475c21dbabcfd08c18fe0e31b847fcd3f"
+    },
+    {
+      "root": "earshot",
+      "path": "docs/VALIDATION.md",
+      "sha256": "07cc14f8611bef3a7a00bdbad8b2c12ff6d85a4c18dcfdc6b01bbae227d73820"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/__init__.py",
+      "sha256": "2657c8e1e4a4c37696ddb6610746f129fe7dc1d43a823567d87d8fb07089fd37"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/__main__.py",
+      "sha256": "7afeadd4522552160b4980dc798d62c6351e23026023c4dc3f40ef0a286a8f3d"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/_callable.py",
+      "sha256": "0e19ae794f8c804aca6fbee34ae65d0da19779c6107bad84fa1ef0a4214537b0"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/api.py",
+      "sha256": "fa59c119acd19a4951e40ffe1d2eea3b1877dcd20a83b9a2675573453554a949"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/audio.py",
+      "sha256": "19e05b79c2ad3a09df134a3b2e54b1891057eb741062179c1cc3a00e62cfe53c"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/cli.py",
+      "sha256": "ce459ea688ecac38c4f97dde0d3ff44739252a126314f22b4600f410429aa27e"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/compare.py",
+      "sha256": "3f3a62add240455417666026d3cb75c513b707a5bc3e07bedec32eff7474ffe3"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/config.py",
+      "sha256": "c28e5b753c0fa5098483991f1371573db8879ce6392c01cce68738dc351dc539"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/critique.py",
+      "sha256": "ee8df57869d9f8d383294f963ad84af067465f7104346bfb7c72b40710fdc4d6"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/data/launch_profile.json",
+      "sha256": "8568435e5fe0855fbd73aa2d360bc3f95174c641f8eb939a2d88658720665643"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/data/realness_model.json",
+      "sha256": "a35bd2f82de72ce28783323edb448e10a6b8ebb0656b13ffa35388ac698b129e"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/data/vocab.json",
+      "sha256": "6e5ccf7b7d718caa1b3f896ae776f8fabd1540d41dd504e9c6c608740b65852a"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/data/vocab_stats.json",
+      "sha256": "a43adf61888fbc35162635c0c85a48b9ae5904b27c9eb8441a20f40a3e5eef6e"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/describe.py",
+      "sha256": "910589eb23927370d02a8d162d3f58cf0e19e2bf9c0c72532cc238a6b2025726"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/doctor.py",
+      "sha256": "cf9ef60c568f10cfdc297092b90827d845844034120cf3241b6bf68109014459"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/features.py",
+      "sha256": "77bef295ca7858550aa00da65984281a025536ccfd10f150636eb2c3734cb06f"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/__init__.py",
+      "sha256": "dc98bf6087c84b85b47aeaa0d1d102ef5c0a28cb400645259d1ff79606919175"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/bank/fit.json",
+      "sha256": "439a8a0b71d108168d48ed8355d00ada294bd0daa7bce164e98483444d966da7"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/bank/forge_v2.json",
+      "sha256": "ec18dfd0c5684166786a2a4034daf718ae780e4fc7ff03a6393b29e029a8d632"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/bank/pluck.json",
+      "sha256": "0511420c436810c5450300e10e265f35bdb24f59d38400f4f2e892250469517b"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/bank.py",
+      "sha256": "92621546adc865101ffe61542bd581dedf119148ff4d0adf0fa9360f41ff677b"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/critic.py",
+      "sha256": "a673bc6c706d3351ecf9b871f2c18331bd07c54c093127c3e2c98d3411efd83b"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/dsp.py",
+      "sha256": "3c8f60be1d5096b591af3154803bb9eea57be07279aa267801d2e8abcc3aeda7"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/fit/__init__.py",
+      "sha256": "475aab55870ba3c0aa3be0d88c3ff32b1dda2fd21b4f495efc022d64a9c0e967"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/fit/auto.py",
+      "sha256": "58e251bb448843ac9df58a015c9bd7b0abd06d35de793efd8c4330866185f189"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/fit/codegen.py",
+      "sha256": "ef968fc0a77646cdd1a41d83a793a55a2c4449d86e7f12eb07f31de53a93d982"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/fit/modal.py",
+      "sha256": "7d4c9503eca3d5a20ccc49c1b6e9563c37bdeb7e4165033d32c1d24de349520f"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/fit/quality.py",
+      "sha256": "367fcd5331e6551a5f8037921ab5dcef61a5ce227253bf423170d5fdfdd0423c"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/fit/sines.py",
+      "sha256": "1f09e574deb5cb941650434cbc143549f2db3ea7fbbe3e230d152f9eb11b3769"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/fit/spectral.py",
+      "sha256": "54306c6e9f489bc1fd6cbd7beb835d1062ad6b575f161ddc39785629d4a773df"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/fx.py",
+      "sha256": "678d3fcce4a89e4af3bc4260d1fd681364a3c85dff0df3eae75a08cd1d03e568"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/kit.py",
+      "sha256": "790640649d733836839f5bb9243f4c3a6d0e4a595fe960d109bc1afcb99ec3c0"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/kits/calm.json",
+      "sha256": "7bf9d859ad7794ee4b678ab9f410bbfc6aa843d502663fc746bc28e2fa9522d1"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/kits/crisp.json",
+      "sha256": "c4a3677b2e3e98f4741782285ba4c066e105c86c30e7238694d59a0f18f4a348"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/kits/minimal.json",
+      "sha256": "f8caca638a63042762c9b8e07a96f25ea64d473c8f3ee0bd4920aaceb92150a7"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/knobs.py",
+      "sha256": "abcf78cc4803c0f564346cb8dfd966f17b197381c2655a7863a0860582799451"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/polish.py",
+      "sha256": "c1e88f927ddcd0aca8b1b0bd92da8b66bfd8321929beec4be5aa2e7d316f6db0"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/recipes/__init__.py",
+      "sha256": "0050ef7da06c0ac0edeb786343d7b648701051c79c3aa0d452440485a9edf96d"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/recipes/click.py",
+      "sha256": "efa9b18ce7cb3a217ea462da0cab8450bca723c29b21b2a9dbdd3f3cb8733520"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/recipes/downlifter.py",
+      "sha256": "6c24617c3e891ff823e9a9689874b1b9997edac4e5874146b426a8b0403c8332"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/recipes/glitch.py",
+      "sha256": "9c9b6ebeda3943ce4af512cce7f427ca493e63ffd5245b09b0e8f9f024613c87"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/recipes/hover.py",
+      "sha256": "5ae90ed7b49eb7f448bac4c31ccf794a03d5ed161725b4604c2772717396aedb"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/recipes/impact.py",
+      "sha256": "530925fde17375e907a17d2598a066e3a83c096f5712e7abad2e9d9fc9ad92eb"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/recipes/keypress.py",
+      "sha256": "0164fcba5e8a2e92b9f15f5fab9dfad9a8cee992fa6439ba49a19b062251397d"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/recipes/notify.py",
+      "sha256": "afd3824108b668d05c9dd30ed1fd77788f2e882ac551803abcac0493f0e40e9a"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/recipes/pluck.py",
+      "sha256": "53cddd7e1e571db829133b2c821227abbc6f2ab39a4332a93f30fe2b7e6dd996"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/recipes/pop.py",
+      "sha256": "06fbea973725fe715d2cbde1b9c64da92f58271a00e407af06e712d2cb28683f"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/recipes/popin.py",
+      "sha256": "9a7a4cf55c5035bdff395e56a4de02422aaa5c8c02f58f1cca30cfa16f80e706"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/recipes/riser.py",
+      "sha256": "e942a8d94997bf5501c15f5ffed2138339affa41d130176ade1a79b7188266ad"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/recipes/shimmer.py",
+      "sha256": "f03133e71ab527dd3305100c80d950115a8332bdb43a77980a60033688935ab1"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/recipes/sting.py",
+      "sha256": "7e573cb53e445d38de2d49a9503c6cb69c0430e051c789882d106e1ccfcdb95b"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/recipes/subdrop.py",
+      "sha256": "ed2ec787e92be314dd01eefdf8f6c92dd57016e5ea5754d10a4d5023cfbb7b2b"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/recipes/swipe.py",
+      "sha256": "463ba23dfcc70ec68009703bd35efdd758f3f9edbdcd61d671bb197a63a1af20"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/recipes/swish.py",
+      "sha256": "f6a4d2fafeeea9280dc1f3f1c8bb98068c5522bef4f6df521f540ba2b7170bc6"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/recipes/toggle.py",
+      "sha256": "318ede4c5075eefe16d8667c343f04d90c0284f9fe5c0d3f506ee930ce05a6c1"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/recipes/typing.py",
+      "sha256": "dd6b7af48a264ac3e312feb3786b162fc61618ab408c9e5b874b9727aaa30de8"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/recipes/whoosh.py",
+      "sha256": "4185369cf5e8ba33e953bce2193def222a26dfce3ac4da7a5d88bcddb7ae447f"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/recipes/zip.py",
+      "sha256": "ec2192a5fce3287e03f6df1b9741a24e0d9ce54b76c7633d76c36f642d807cfb"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/refsets.py",
+      "sha256": "19e4845257e85c497fe62a4f9a69a83bb87b969c6f5716e8ce1fba263b49e6c3"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/schema.py",
+      "sha256": "0cd9f693a926bdb41a90d8faba38345f1dd6f5f84374d863e3945c6df9931069"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/search.py",
+      "sha256": "5689110a72f1a7f3d2ae96f30a0a957b86cb20c9a08b0210cb5a622404c4f9c1"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/seeds/click.json",
+      "sha256": "2436ccd00759e89e4cfc2563095c287b0439d9f68fbac616767450a055d1c04a"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/seeds/downlifter.json",
+      "sha256": "b33e0b207d0eea7ef917f7efe2f918e105ae7ff40d6c3b22f911ba8207d9ddd9"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/seeds/glitch.json",
+      "sha256": "38913ce00879265ab282b756282133eb7d3be0cbbe4df55758f98c4da170dab9"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/seeds/hover.json",
+      "sha256": "5fddba43104ca8dd4ea0d4b159c3e6ea107b5f8b25f894f36e471890b30b6871"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/seeds/impact.json",
+      "sha256": "60f97aeb0df63c47a773b256e69752b2b9b2319d8d56d618f3764e4608ae6ace"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/seeds/keypress.json",
+      "sha256": "0577cabd36644883ac9438974343eefbb834c82a8cb32012c9867259e309b37f"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/seeds/notify.json",
+      "sha256": "d982ca7e6efb12137d541305ae87f8ff118869bdf22796b17efd7079362b0591"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/seeds/pop.json",
+      "sha256": "384bb5ff2af84029234dbf95699dcb66fcffa4bfbd4c3b6948c633fda4920fa6"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/seeds/popin.json",
+      "sha256": "06bfe0fdf285c6798474934a85836a07030f8c3f1c05c681e86e2805f575d9b9"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/seeds/riser.json",
+      "sha256": "42ca8a1a83b93feb3f3671ab21ff92662465763fde8e03f8d626e3d8f06e9726"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/seeds/shimmer.json",
+      "sha256": "084d00240c04536e848632c9c768c1b1330122f9df83f622dcb72ed6fda722d5"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/seeds/sting.json",
+      "sha256": "8eabc5461deaf15b50d79a40f2b6228e02513b9c3c6fdeaa6a24e5d233d7e884"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/seeds/subdrop.json",
+      "sha256": "bff61f0811b747c192dae9f66778e4df2405b2f07c4549e529607051e4fa86b0"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/seeds/swipe.json",
+      "sha256": "aa66c92c19bcdd26dc202aa6bc618e6f9b727f3afbc46c95ffc8e1849b994506"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/seeds/swish.json",
+      "sha256": "4d47574e50101afa06bb689002135e1930515543e9390a78273811dfb6312513"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/seeds/toggle.json",
+      "sha256": "6142742337350408ad6ec4ba1aae4c353312f6473c6a97f9355f426e27534943"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/seeds/typing.json",
+      "sha256": "ca701c3fbfeb0a084379cf05a721d1e0489aa25daceb97b62e7c3a6e85f724f4"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/seeds/whoosh.json",
+      "sha256": "51b164efae907a8410a173a7825ae020dd8978246d84d46dc7cce8637f104b8b"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/seeds/zip.json",
+      "sha256": "f4ca55c8b589f00995a935f09b2489cffd765b56ba6913da872bff748bd70174"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/sfx.py",
+      "sha256": "15fdfc4c83f7ce3e64872051697073e256867be44824eba70cb7ef2a96f605d0"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/tone.py",
+      "sha256": "2187a0ec5cef7d3dce0606b182a3911fb6d9e997d9eca5ff2fd644bb63ea7bed"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/forge/viz.py",
+      "sha256": "4ac60a05c9c19d7f6ae8d9343a62502bb11f48a041b3b87df45626855e270d34"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/gallery.py",
+      "sha256": "2a84836dd262340bf1c87a2151e8cde646bd22f67f89ad145d3dc4ec8bc3684b"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/llm.py",
+      "sha256": "f133b7bcf9931221eef94f5457ca21c27f6e38ae3113311eacf2c7c20e9bc5bf"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/match.py",
+      "sha256": "4e78dcf0160d12688eb6bd712609b8efa7a500f61186469a48e315635398e300"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/mcp_server.py",
+      "sha256": "2cf3da0caa90f7c2e17c7c57c47cba49a656582685fdb4ea0905c2c75c4e55cb"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/models/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/models/ast.py",
+      "sha256": "3f02f7bf8f3d588726e8c3801073773f0f7753bb749f7ca12ff2a0e875324f0d"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/models/clap.py",
+      "sha256": "67926497f69e9e30b27a60d020bcf2bf75b3914a866c60bf9297a90e2f731d40"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/models/hub.py",
+      "sha256": "a46fe83aa33303f68877e1eb99d8c158ffbf8112a47cfa36da78b9077c5c6991"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/profile.py",
+      "sha256": "aff6519cbc1349a1d01c0fe564412a853bd212bae136d0539110e22944a54a3d"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/realness.py",
+      "sha256": "03f675c76eab42d7eb1b12e57e313c5929233aa616c13b5bac1e1661ecda230a"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/report.py",
+      "sha256": "c3b83e8986017ea2b50920935e6f2259fab5ae5a1d7989820912a0489508a9f9"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/search.py",
+      "sha256": "8ac80737c82e0bc23cdbbf9ba00ca546ee6446a80e871067ca3cd70e3380d505"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/sheet.py",
+      "sha256": "1dc82b22bb1fb08b2184d312109e10e9c9441e0c4bc0a45f5526293f0fac2b45"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/timeline.py",
+      "sha256": "4b1d036af173c1539cf21b67a256a461a838673c68fd1a9d58bda8a4226b72e5"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/video.py",
+      "sha256": "eca93154fe91ff87045ceddf52ad507662a44fc0802b66e289c7eaec39b580a0"
+    },
+    {
+      "root": "earshot",
+      "path": "earshot/vocab.py",
+      "sha256": "304b79c53ab4c845325f0833c085d2181ecfad42ffb2a994eb43f92bc2af332c"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/evalpaths.py",
+      "sha256": "86de8796e1c85358c8368d2b4e5f56d216306ab2fd84eff7abcb2408fbe6e63c"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/forge/bench.py",
+      "sha256": "e73ffae27d26807265579d0acf65c7f05be10fac9eee7475ffff174d4751cca0"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/forge/blind_v2.py",
+      "sha256": "c181dbe5e0cfd748ca2699b33325140418b840ba409dd0910417e6d782652e25"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/forge/build_refsets.py",
+      "sha256": "ea56be00b38ef67b4bee13f0435b03444638f980329e3385f4042ff5240e6f86"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/forge/frozen_tone.py",
+      "sha256": "4c10014232aca644387a17233f092360b6a52de020a7363f43b9f7d0406ba584"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/forge/pro/crops_batch.py",
+      "sha256": "f564992b8c0d0267d1a532deca124d288a30f7595a89e80c6f3f2c2d37098d52"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/forge/pro/events.py",
+      "sha256": "1047f5594adbc5bf1430f5cef420b9819201ee006dc92d14b67a8e06e34902b9"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/forge/pro/extra.py",
+      "sha256": "856ca215e1d6fbc4e4bd5ccde1b42d97a028f1899e933b94f3250164c7dc98d7"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/forge/pro/film_table.py",
+      "sha256": "0608c0b47b46d04ef0d51af2c338a45a09c7a0aca9dd3f8a73262aa715676fc2"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/forge/pro/measure.py",
+      "sha256": "73116dca02c1126d07442e2ac73819ce64b0d47c20331aa7ea7b0d861d680ba2"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/forge/pro/run_timeline.py",
+      "sha256": "508d117ec55c1322cf1f99cf1e03a246b2aadb46622f41e384dc658bd39aadfb"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/forge/pro/study.py",
+      "sha256": "a95448f9f04868d8058c3808c7a336b4a9e7d632b4371207527010329b21e962"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/forge/pro/videos.py",
+      "sha256": "2d2de58fcd0119940ef7cef466fbd51d4a0d32f637a7b5e5bff6367916ae9a7d"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/forge/pro/viewer.py",
+      "sha256": "d19eb90a1ab49a3a347fb94a206f5db195a979fc145533bf002eaa6ad394759e"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/forge/RESULTS.md",
+      "sha256": "e050eeb5c6af732c59df88d03f3b3cda8668d76dbd8a23be6b2aea6e0ce63240"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/forge/results_real.json",
+      "sha256": "94919da323ff9ea00c042661d72544fdd271b00837b0f66b4b0145f161784dd5"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/forge/results_real.md",
+      "sha256": "7367a50258ae66eadd876628953b3ad076b04a6cf3dce2f92fa204c3c9bdf668"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/forge/results_v1.json",
+      "sha256": "41f3fad22139be1b62ca8e2973bf339842543dc824475b4c8c618d5478d04754"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/forge/results_v1.md",
+      "sha256": "fceea035b0663e87cc6e3866e533c5c3951301f3aa1421e744da7576749de604"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/forge/results_v2r2.json",
+      "sha256": "65fd8638ef0b89fb9ba3ed9f8f45500636c97ce323bdbed5f57f9e6f2adf30c0"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/forge/results_v2r2.md",
+      "sha256": "e1e3b9baabde69af9e1352e71ae65cd886e67c9329c8b07cde5a0ebe3dd1dbc0"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/forge/results_v2r3.json",
+      "sha256": "f213844ec1db31674c553eceb777a94a6f0237e16d5d2240f2162e187f68935f"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/forge/results_v2r3.md",
+      "sha256": "8c0d9b9ae74007fac649167e0b22288aa2d736605fa66da9d3677b7bfb9a94ea"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/forge/results_v2r4.json",
+      "sha256": "cf8f241bdf476c1a2c95a2d4b8004b3ae7b4427273a97568654496bf0c01344c"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/forge/results_v2r4.md",
+      "sha256": "f62e98b28829d4c3cdb0a573f9e06a5381634da6bd269a2fc8d59d4abd8e6ae0"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/forge/results_v2r5.json",
+      "sha256": "fa7c6f0283bdf186f70c4dda41f36277a56207bf9398b5c002cdf341747f4d32"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/forge/results_v2r5.md",
+      "sha256": "b74ed281383eebc3996144337356d2ee0ca5027715d129042bf3588bd050e266"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/forge/results_v2r6.json",
+      "sha256": "9af5c675bd46d47b2f9e0494f8781bac817c7f4ed18a8ad89b9c2a01524f9534"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/forge/results_v2r6.md",
+      "sha256": "1b765d3dec9c3e7211e3562429e8a20fd120d5e366036a88f68a801ae696555e"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/forge/scrub_paths.py",
+      "sha256": "35845f1a41c3d8e12fcc9ad49b4ca9b99bb554c66e7730caade089e729b94d8b"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/launch/films.json",
+      "sha256": "ad8d1b1dfbef59ec1859f12006cd27ee030ae09f63993a974de3abb434d43c6f"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/launch/negatives.json",
+      "sha256": "8d5bb58a034314354498a14b55da5506533ddef2b327b402c01221634e86d063"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/launch/refs.json",
+      "sha256": "49f49c7448883b4a2dfc4eea0c3bc8df1bf18f4662d26a8de16efce26cc8f1b8"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/launch/results.json",
+      "sha256": "a5aebae1cca8c60dc9027e0e89246bd68cae1686be66b12e6cde7ffe911f1b87"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/launch/RESULTS.md",
+      "sha256": "59a8853952c4a46c2bb76be5e7c3e0bef1e51e17114c55d86c9e7f24fcf48f2d"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/launch/run_eval.py",
+      "sha256": "6977ed28d991cb88cb07dc5eaaa49df8b3fd1603751dcc3cf1f721bd6cb2516b"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/README.md",
+      "sha256": "fdb4e548318e52f77b09e2e78a00a2ac9efe0cfaed571d0c705ffcebc5787361"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/realness/build_data.py",
+      "sha256": "969508d5c4174ccceaf63dadb0e064c910f8d28dfa79fd2ab1cd317f034a5043"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/realness/common.py",
+      "sha256": "1d64287ff1666c009166f476414d76ef1e034913288a3564b61138a63b4de153"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/realness/extract.py",
+      "sha256": "3e07c4946ab2d24e98759d13fb3342851b86b6e51d8412130b50e1a1532c0619"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/realness/generic_synth.py",
+      "sha256": "122bb16c82fe02345926e8f85f61eb8fdf3626dbf2cae428389c9eabdc414f1c"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/realness/results.json",
+      "sha256": "dcc2a50d62362770f9126861c0c7290dc71005612f55d46df69678dd65600834"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/realness/RESULTS.md",
+      "sha256": "3e8b7af732e491c6db6b0808970082eb2af4f0290397a988fddc0a04af72dbba"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/realness/run_eval.py",
+      "sha256": "dded91c77af5ae50967e8d4329f27bbc4f11a59201b4db39ade7fa778d0eff5f"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/realness/tone_guard.json",
+      "sha256": "7d010c5a8304066f466190b741560882c14a61429db91f02ca1b61590813fcaf"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/realness/tone_guard.py",
+      "sha256": "1e9820084618aa5f536ac42f19b92f2ad843b99b775c0f63d4dba808a94828ad"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/realness/train.py",
+      "sha256": "09658b958999955947935f65824209c1eb7f0abd4acc5fb65d28d5efd94acda2"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/semantics/find_repeatpad.json",
+      "sha256": "ecb4ee61e8dc3f7718bfa4be784d52a421d0ec424448f3f6dcef7c32980c0fba"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/semantics/heldout.json",
+      "sha256": "ac80ac9bdc1901d8160053780b9b248f1a9e6a1622f4344f361e86a60015bb40"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/semantics/heldout_labels.json",
+      "sha256": "eba1cd2516e9f02a31cded2e7f0c2eca7c304b14b94792c8b3360c5f2f3d9ea7"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/semantics/kind.json",
+      "sha256": "4efbdc9fc4567b99d3101c73c91a061a7c927384cc276ff08967481934836ff0"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/semantics/kind_queries.json",
+      "sha256": "b7dc20d917db415cf6ec1ceaa0215c693dcf0d2e623d85ada530d28811f3fa71"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/semantics/precision.json",
+      "sha256": "5a88e4bcb3fb9c1340e39a59a519fc5554ffcf1437df8036b0dd97954b7c87df"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/semantics/precision.py",
+      "sha256": "7bf97d61ca7fc736db8e34bccfab3b435e95aa5392b100bd0410b647f1a7860a"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/semantics/queries.json",
+      "sha256": "b4e69260a9aff50a73caa04df54ffcb2cdd3856d32aa65468fe8e5799b77738e"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/semantics/results.json",
+      "sha256": "d6d2d91297a7e57bd50130509d789543e1a9f2801bc091cced53aff3fe309acf"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/semantics/RESULTS.md",
+      "sha256": "4721f1f274e2216959faae85efceba70f01475110a131fbaba75db993ba68db7"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/semantics/run_eval.py",
+      "sha256": "9254df594899a8fcffa892b9259e48a2c5003e8cb781bae2e553c3595e81325b"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/semantics/timing.json",
+      "sha256": "074261600e9d4ae925b466419fe7e1cbfe84f8423687f044b293fcbb9a54899b"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/semantics/vocab_preregistered.json",
+      "sha256": "1eb91cbc138da7489a3252f7905c1bf869654c9fa639998d28c798b04a9ef118"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/timeline/label_tune.json",
+      "sha256": "6b04705540c08d8ff691b49c9093b3583ef8f35bd7572815581b58d07f107d3b"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/timeline/label_tune.py",
+      "sha256": "ce29dcf16a03f145475a96649af58f0e19c65fb129cf5942627000a3b5bab07e"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/timeline/mixes.py",
+      "sha256": "c52726f12e0099b703e3d82ac528a5448bb4b9aa1c2e0905e13713683a8a6bdd"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/timeline/pulse_tune.py",
+      "sha256": "f4dea2d9e1563e141d270163d461288aaab6164a1aa03f363546b5162223c9ba"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/timeline/results.json",
+      "sha256": "4df3e0d56160e8df7de81cb58b5be3b70a2418e32a54a9bc751138b693e72203"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/timeline/RESULTS.md",
+      "sha256": "be1b2e017d33658d2a7ef51c32616edf437e30f0143ef6f110be14f3a3ccdd85"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/timeline/run_eval.py",
+      "sha256": "bc9f66e0eca9c3b64014c5b32d5f3f4f31164682a512049c9778dbbdf22ed006"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/timeline/section_tune.py",
+      "sha256": "3232ed7f85060dac11116bc7f27585c52b09410d78054ee9da128d12d9b0b5ef"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/timeline/swell_tune.py",
+      "sha256": "1f98b163fafe27fe26c0d6dd0903623f420e3b1025e45d502961191f076f637a"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/timeline/tag_bg.py",
+      "sha256": "0d3f6d3cdf7fcea18b3eddb5740a22ec912a7c6ae3222637acbdc85b209569a2"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/timeline/tag_tune.py",
+      "sha256": "cb3c4bd9fe8557e04ce7e38457e81c0aab94454c9f812443210bb6fa1b51f023"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/timeline/tempo_tune.py",
+      "sha256": "bc5ed7357968b44919224582355e13c68acae8c7e91cb750adeb5b5d47595c7b"
+    },
+    {
+      "root": "earshot",
+      "path": "eval/timeline/tune.py",
+      "sha256": "d161efd5b84caa0a8c91f45b9440fd77baeb5f5e098c06c149586fe3e731e09e"
+    },
+    {
+      "root": "earshot",
+      "path": "LICENSE",
+      "sha256": "d9177365c7471d18ecd623ce7b8849e26ab8d7e7fea13e1fcbda62397ecb9db8"
+    },
+    {
+      "root": "earshot",
+      "path": "pyproject.toml",
+      "sha256": "07d26ef7d7aa5327ad1323881236ed430d6e783a7ef47ec7a04bf0b1a2717dff"
+    },
+    {
+      "root": "earshot",
+      "path": "README.md",
+      "sha256": "8ae65629483409deb1cc5761e42cb5b14308d83111d8f88ee7b3422e05e677bc"
+    },
+    {
+      "root": "earshot",
+      "path": "skills/earshot/SKILL.md",
+      "sha256": "c2e065c148f78068c7c8496e94315ac8c9343bd57855b835f1d041c79d6aa237"
+    },
+    {
+      "root": "earshot",
+      "path": "skills/real-sound/references/design-format.md",
+      "sha256": "d02b5163f1add9df79101b15493979b4afb0abd40221a63f78fb606cddbf7c24"
+    },
+    {
+      "root": "earshot",
+      "path": "skills/real-sound/references/licences.md",
+      "sha256": "b3148cc87015d54ce30e0e0ac7117e1092cb3b64f034eca31e5ce8101a348374"
+    },
+    {
+      "root": "earshot",
+      "path": "skills/real-sound/references/process.md",
+      "sha256": "10bac9eed994ead133699e22f5010f1fcb7a426c3037959abded7b77ee69d49b"
+    },
+    {
+      "root": "earshot",
+      "path": "skills/real-sound/references/sound-design.md",
+      "sha256": "199c18ada0ff8a5782479bd41eb90fd2011eafa188a251a837f95b94bb5f5389"
+    },
+    {
+      "root": "earshot",
+      "path": "skills/real-sound/references/troubleshooting.md",
+      "sha256": "15459cbac0dfb0b060ba0521f81e21ebc4aea9d3df09606e3ce1f4708daa2963"
+    },
+    {
+      "root": "earshot",
+      "path": "skills/real-sound/scripts/analyze.py",
+      "sha256": "b3d450d895d74214656c290e9240848ac49ed03175451598f8e59a7872ced208"
+    },
+    {
+      "root": "earshot",
+      "path": "skills/real-sound/scripts/arrange.py",
+      "sha256": "e90d919d0a9d3835e9a822ef5324d41afce74e39af7c2507b8e73fcb079c8552"
+    },
+    {
+      "root": "earshot",
+      "path": "skills/real-sound/scripts/audit.py",
+      "sha256": "6c65d730dd98e25a3bea447ac21cd3ce0b5c0d29637a26ecfcfb9f0c43afd01b"
+    },
+    {
+      "root": "earshot",
+      "path": "skills/real-sound/scripts/credits.py",
+      "sha256": "35f84bf5890adafb58bc0628f4208f80347468fd82fa805d66a25968ee28f545"
+    },
+    {
+      "root": "earshot",
+      "path": "skills/real-sound/scripts/licences.py",
+      "sha256": "f45281439ef379828391cb68332c6555101a6297facd1180c38fbccc20af92b4"
+    },
+    {
+      "root": "earshot",
+      "path": "skills/real-sound/scripts/master.py",
+      "sha256": "77a1f133ecc372c5166399ec3849826130c5be82faffd2236708522caaa28798"
+    },
+    {
+      "root": "earshot",
+      "path": "skills/real-sound/scripts/mix.py",
+      "sha256": "4c3d5b94e6141a8bd8942ff6e95c28cd791361b0aeb3c08eea46c24c274256d5"
+    },
+    {
+      "root": "earshot",
+      "path": "skills/real-sound/scripts/mux.mjs",
+      "sha256": "b387c76f5f940451a3af10c3535d00bd085fad017652e64b1344b719092c15bc"
+    },
+    {
+      "root": "earshot",
+      "path": "skills/real-sound/scripts/qa.py",
+      "sha256": "0244b29ac1d3b7c891698889e20aa21ebef107b7a30a084c76f9ae77a90d2aa1"
+    },
+    {
+      "root": "earshot",
+      "path": "skills/real-sound/scripts/variant.py",
+      "sha256": "39c5c35548c853c8b45da4436b4b6a11a1cdfe4b4dbedf490b9846f5c511772b"
+    },
+    {
+      "root": "earshot",
+      "path": "skills/real-sound/SKILL.md",
+      "sha256": "4810cd9a42676d927ca3cee29933bdbf2ddb92976e869fa439f38531bbc59a0e"
+    },
+    {
+      "root": "earshot",
+      "path": "skills/real-sound/templates/arc.json",
+      "sha256": "25f36746c18468f38fe9dade8b4cfbdd9eacef6dd43b3bce8e61fa97d32ee902"
+    },
+    {
+      "root": "earshot",
+      "path": "skills/real-sound/templates/audit_entry.json",
+      "sha256": "cc4dc8fa1fff459d60223a71f82f6c249c1cca97f6542ea2b906ff8c1b0ae4fe"
+    },
+    {
+      "root": "earshot",
+      "path": "skills/real-sound/templates/cues.json",
+      "sha256": "8b4b60bef715948a3400a765937c5209ee98c3258fa35132f7b97b3d8a6ee303"
+    },
+    {
+      "root": "earshot",
+      "path": "skills/real-sound/templates/design_fragment.json",
+      "sha256": "1388f4ebe4c08930f8b6db454497a5f7c873797e0821b697200a3d9288b601de"
+    },
+    {
+      "root": "earshot",
+      "path": "skills/real-sound/templates/manifest_entry.json",
+      "sha256": "124447d4f563f8541518dc2bd10561e9d4b87a4137b74991197d191883edd93b"
+    },
+    {
+      "root": "earshot",
+      "path": "skills/real-sound/templates/prompts/critic_director.md",
+      "sha256": "52840ae7b9cbbe8d6587a6a4f8a985ccf7537270abc1cdd4727983dc9597b6dd"
+    },
+    {
+      "root": "earshot",
+      "path": "skills/real-sound/templates/prompts/critic_edges.md",
+      "sha256": "b23957fcb7b1e375fe319cb7ab49a26b5bf9d6f00f68eb4ebbc6bb054586c342"
+    },
+    {
+      "root": "earshot",
+      "path": "skills/real-sound/templates/prompts/critic_masking.md",
+      "sha256": "96cedc89296263fa6cb3318328217ef29f0220655ff5975f19afe1d10809ac59"
+    },
+    {
+      "root": "earshot",
+      "path": "skills/real-sound/templates/prompts/critic_sync.md",
+      "sha256": "607072d2858080a102a4d28c8b95160c8aa2c6f34590c03de52ea7ac4b648f17"
+    },
+    {
+      "root": "earshot",
+      "path": "skills/real-sound/templates/prompts/critic_tonal.md",
+      "sha256": "32f52f61b31e67b4f16bb8bff37a64c55fd30b873f8ccb6839224c03edd002df"
+    },
+    {
+      "root": "earshot",
+      "path": "skills/real-sound/templates/prompts/designer.md",
+      "sha256": "e077b95dc39d4e2feae6007cdc877529b3f66c018cc06717ccbe25e7435fd1c8"
+    },
+    {
+      "root": "earshot",
+      "path": "skills/real-sound/templates/prompts/fixer.md",
+      "sha256": "619141714e4648cb3c90032ede95fa2438931e753a657a9c11481e70627a1a65"
+    },
+    {
+      "root": "earshot",
+      "path": "skills/real-sound/templates/prompts/licence_audit.md",
+      "sha256": "a7c8aee51fe30bd06c4aef53ab83f6587310359db5418a7c374a3cbe1a3d8f96"
+    },
+    {
+      "root": "earshot",
+      "path": "skills/real-sound/templates/prompts/music_supervisor.md",
+      "sha256": "a9fed9c3075ae1769717932e456b0b379940c264a951d6ccc563a6a41d1471ca"
+    },
+    {
+      "root": "earshot",
+      "path": "skills/real-sound/templates/prompts/sourcing.md",
+      "sha256": "a05c61567e707187b6eb81a667931a4344b9374734ce3f8988e8d4f0ba76eac9"
+    },
+    {
+      "root": "earshot",
+      "path": "skills/real-sound/templates/SOUND_BRIEF.md",
+      "sha256": "4f4f7fb073a93764b5f2dd1c26b3ef5f86992d60c9b532cd3b2c58db8279e808"
+    },
+    {
+      "root": "earshot",
+      "path": "skills/real-sound/templates/sounddesign.json",
+      "sha256": "cda74dd778db5ca0ebf6f51d62efef8545c1f39688a10b264a73d73391c26da5"
+    },
+    {
+      "root": "earshot",
+      "path": "tests/conftest.py",
+      "sha256": "216c4e5994ddbbc59c1d3985d149c28c5b18fb04db1769fb6ca71179b9d56fde"
+    },
+    {
+      "root": "earshot",
+      "path": "tests/test_bank.py",
+      "sha256": "5389abb058dc68c31cb667073a3b17c997583cebc2e8de1d246858ce80b4b298"
+    },
+    {
+      "root": "earshot",
+      "path": "tests/test_core.py",
+      "sha256": "0b9fa5e1a11550d4fab91e988657e68d64ca1eb4cf25d25e7886f1bc9b007711"
+    },
+    {
+      "root": "earshot",
+      "path": "tests/test_fit_engine.py",
+      "sha256": "c1dc6aa5265796f483711b6f69e288a63d3302b484d9ad12061a1ef227f96c63"
+    },
+    {
+      "root": "earshot",
+      "path": "tests/test_fit_modal.py",
+      "sha256": "93c1e7833527657a8d48566a184fb541b65ee10bb1ed988a8ebe23d951d57e14"
+    },
+    {
+      "root": "earshot",
+      "path": "tests/test_fit_sines.py",
+      "sha256": "d222a5d2f4903019139924f9dd714e555aa47142d61a90f18f2f39484d295bf3"
+    },
+    {
+      "root": "earshot",
+      "path": "tests/test_fit_spectral.py",
+      "sha256": "1496378c809ed30875294692a84c2bd99541659f97362fa3c98c411b04a3b924"
+    },
+    {
+      "root": "earshot",
+      "path": "tests/test_fit_takes.py",
+      "sha256": "4bb61af721af1c7e7d3d053087ce6a0622e5845ffb7a45bdb2aff1d68b18da7e"
+    },
+    {
+      "root": "earshot",
+      "path": "tests/test_forge.py",
+      "sha256": "30a85895b97499b2af1d449223d3471983944a813f59f387b93ef41197adc83e"
+    },
+    {
+      "root": "earshot",
+      "path": "tests/test_forge_core_r3.py",
+      "sha256": "546a878f6026791535149861d5bc8ee610d1e2b1b9bff2b465757ccf4c4abe85"
+    },
+    {
+      "root": "earshot",
+      "path": "tests/test_forge_core_r5.py",
+      "sha256": "d74bf29ed1014b3edae3b6da27a7e4eb8b059187447b698e839f8812b2bf5bfb"
+    },
+    {
+      "root": "earshot",
+      "path": "tests/test_forge_critic.py",
+      "sha256": "b010b2a8dca93cf69399be31719361ff1ed44168458953a32b9bf59c8e3fba60"
+    },
+    {
+      "root": "earshot",
+      "path": "tests/test_forge_dsp.py",
+      "sha256": "e4163d0debca9165b405ed41806c6e69959c78c8d4ebdaa4eee32bf56389d092"
+    },
+    {
+      "root": "earshot",
+      "path": "tests/test_forge_integration.py",
+      "sha256": "ed6c84338f898c7372cae4d25077de2d0320b18a5ee2974eed6692c04b2f7ca3"
+    },
+    {
+      "root": "earshot",
+      "path": "tests/test_forge_recipes_digital.py",
+      "sha256": "c86c78b52926baeb748eac00bbae6fcd6d5ae5eb2afb189d9efb1fa83df83ff3"
+    },
+    {
+      "root": "earshot",
+      "path": "tests/test_forge_recipes_impact.py",
+      "sha256": "1cc2d04f0ebe3fa0e212c2962a2f6738197e549471118b2ed63366cb35c7bea2"
+    },
+    {
+      "root": "earshot",
+      "path": "tests/test_forge_recipes_sweep.py",
+      "sha256": "ef15eb3d498bbd582fb7fed014e02d51c08c76c7e05aa0f27914d82f3c395309"
+    },
+    {
+      "root": "earshot",
+      "path": "tests/test_forge_recipes_tonal.py",
+      "sha256": "e8b6e4f2e3a10d96b760fa6e74595f244061b5e42b5c5ca5ae53ada2a18be84e"
+    },
+    {
+      "root": "earshot",
+      "path": "tests/test_forge_recipes_ui.py",
+      "sha256": "e5b5e8a3ce12bfc32a8bc69dffd79216f84d550461a8673f35e9684e0db24501"
+    },
+    {
+      "root": "earshot",
+      "path": "tests/test_forge_recipes_whoosh.py",
+      "sha256": "21adc102464fc80d7f4bd6916b9cc0aca0bbed570891830ea4fbe31dcd9383cc"
+    },
+    {
+      "root": "earshot",
+      "path": "tests/test_forge_refsets.py",
+      "sha256": "1eabd477b33df04095e6ff5c744826350c39e7682d89280a21eea159288aa5d2"
+    },
+    {
+      "root": "earshot",
+      "path": "tests/test_forge_rerender.py",
+      "sha256": "ffc92c48b37414772ab52200d04b489b0e9b47da18dba877b8d56ebed8d146be"
+    },
+    {
+      "root": "earshot",
+      "path": "tests/test_forge_round2_fixes.py",
+      "sha256": "51d0daeabb6f51d8768389a19b72820b939bec197c7a67ebffad9f41741fd6fd"
+    },
+    {
+      "root": "earshot",
+      "path": "tests/test_forge_search.py",
+      "sha256": "1cbf0d938837010e873d448cef5348484785c4a6556a967a91407fed068a8eff"
+    },
+    {
+      "root": "earshot",
+      "path": "tests/test_gallery.py",
+      "sha256": "7ef9cef482524cab0f54422d522b68e6d52eafd061980552a625ff2fbf506de4"
+    },
+    {
+      "root": "earshot",
+      "path": "tests/test_interfaces.py",
+      "sha256": "1d910061ac43ba28d465aaf69d3f728637e8cee8644dc016eff7883207379a6c"
+    },
+    {
+      "root": "earshot",
+      "path": "tests/test_launch.py",
+      "sha256": "7c333b67e61a5d805c380a5179de741c2257d58202869c484eb21784505cb337"
+    },
+    {
+      "root": "earshot",
+      "path": "tests/test_models_hub.py",
+      "sha256": "9ba2bcbe1e38ba79f10c986952686b22f3f7924d4663439e26f21513e77a30b2"
+    },
+    {
+      "root": "earshot",
+      "path": "tests/test_real_sound.py",
+      "sha256": "c772d12b6862c2f877a8517d6af9b5419f724f1a853282b91391447bd89ab7a6"
+    },
+    {
+      "root": "earshot",
+      "path": "tests/test_realness.py",
+      "sha256": "4787c49d5eaf661f7ba9c29d776b0335032ea787e887ab851cf29e2b52bb1ca9"
+    },
+    {
+      "root": "earshot",
+      "path": "tests/test_semantics.py",
+      "sha256": "8f56e3a2fe47db5e96935596e09bd7f91aebabcc370acf3e6f6a921120106470"
+    },
+    {
+      "root": "earshot",
+      "path": "tests/test_sfx_kit.py",
+      "sha256": "56ad080af119d485c050e440861fc4190bf84d6a7a7255df418aea008ab2274a"
+    },
+    {
+      "root": "earshot",
+      "path": "tests/test_timeline.py",
+      "sha256": "da668a3b21306cabc1e83b3bfe2b8931e609a7415649bc8072d65ec9edf021e3"
+    },
+    {
+      "root": "cinetic",
+      "path": "av-audit.py",
+      "sha256": "47a4bed5eefc671e3a2ccdca64a1851b45134a66d06c43731f700fae5bd796f9"
+    },
+    {
+      "root": "cinetic",
+      "path": "check-sync.py",
+      "sha256": "b8929038f87d20e672e684ab9fc67d01ff5f1bb7b7c9140deec79ccc021b254c"
+    },
+    {
+      "root": "cinetic",
+      "path": "CREDITS_FIT.md",
+      "sha256": "14c3e327982530a58ad9a889123a6236842517d94080a0a04dfaff7121651e2e"
+    },
+    {
+      "root": "cinetic",
+      "path": "forensics.py",
+      "sha256": "d5c199eb1072b75e2c34c5363a7b1c6e1823e15e98867c6b1b7aebe7b3776b76"
+    },
+    {
+      "root": "cinetic",
+      "path": "kit.py",
+      "sha256": "573414240ffecdcfc5e0e1a75978c8d0b7ba1ca03eb7c64650857b9865308c20"
+    },
+    {
+      "root": "cinetic",
+      "path": "LICENSE",
+      "sha256": "4575a543ab88dad12ccea7d97e563d0bce5b448b06072e65d3264497dad326df"
+    },
+    {
+      "root": "cinetic",
+      "path": "LICENSE-earshot",
+      "sha256": "d9177365c7471d18ecd623ce7b8849e26ab8d7e7fea13e1fcbda62397ecb9db8"
+    },
+    {
+      "root": "cinetic",
+      "path": "listen.py",
+      "sha256": "7efbe006d58a3fae7b9af36226d8d4292f06db526948d5a7819361907805a93b"
+    },
+    {
+      "root": "cinetic",
+      "path": "master.py",
+      "sha256": "77a1f133ecc372c5166399ec3849826130c5be82faffd2236708522caaa28798"
+    },
+    {
+      "root": "cinetic",
+      "path": "score.py",
+      "sha256": "e8a55a66efa5f045123371da039456b127ec8036e8658485ce41a1b55a8feed7"
+    },
+    {
+      "root": "cinetic",
+      "path": "synth.py",
+      "sha256": "f3c81a1588b3be169bc4a30772526bf46b3914bef59f487b299e7047f5066fdc"
+    },
+    {
+      "root": "cinetic",
+      "path": "LICENSE",
+      "sha256": "4575a543ab88dad12ccea7d97e563d0bce5b448b06072e65d3264497dad326df"
+    },
+    {
+      "root": "cinetic",
+      "path": "references/sound.md",
+      "sha256": "012b90f747f92f27731244ed151b3a55e9407e2f08d06f1b9fde7b9a61f1b8ec",
+      "upstream_path": "skills/cinetic/references/sound.md"
+    },
+    {
+      "root": "cinetic",
+      "path": "TREATMENT.md",
+      "sha256": "3b85663d826c0087143269cacb043d74bb29fc2db48767f728e2a52efaa28008",
+      "upstream_path": "skills/cinetic/assets/TREATMENT.md"
+    },
+    {
+      "root": "cinetic",
+      "path": "sound-sync.md",
+      "sha256": "96570bd14d6a44b8cbecdb6f60d27b2b15fd3be7c24bd56aa2ff269875f23447",
+      "upstream_path": "skills/cinetic/assets/critics/sound-sync.md"
+    },
+    {
+      "root": "cinetic",
+      "path": "SKILL.md",
+      "sha256": "4dadf39b147c8ec9a91899f2e0be6ea8c175c2095edea960ecab3af696e8370b",
+      "upstream_path": "skills/cinetic/SKILL.md"
+    }
+  ]
+}

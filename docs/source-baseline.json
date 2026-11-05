@@ -1,0 +1,55 @@
+{
+  "schema_version": "production_product_source_baseline.v1",
+  "captured_on": "2026-11-05",
+  "status": "organization_only_no_runtime_extracted",
+  "source": {
+    "project": "视频平台",
+    "local_path": "E:/project/视频平台",
+    "repository": "https://github.com/hunger-Eric/video-platform.git",
+    "branch": "codex/production",
+    "commit": "04b1d3a42fa3c67c9304cda9af813c15fe847646",
+    "files": [
+      {
+        "path": "AGENTS.md",
+        "sha256": "dd2be95dbaa065203aea873db0dc7dd8a3c16d4d5bbc6983af169f650ec15353"
+      },
+      {
+        "path": "docs/CONTENT_PRODUCTION.md",
+        "sha256": "ce9d269957c53618a99254a4e5b48592f9ae0af9fd5f4ace3c9a14192dc8e761"
+      },
+      {
+        "path": "docs/MODEL_CODE_BOUNDARIES.md",
+        "sha256": "a814a770b5f397b9fb6b9ebce2ec88cca4980cdcf9fc3ed242457d0a25e3ab6f"
+      },
+      {
+        "path": "docs/runbooks/project-knowledge.md",
+        "sha256": "cf58099f0056c4d71d6dc5455cf3204541183e6d273830c7c3d7640ddab2c755"
+      },
+      {
+        "path": "config/production-pipeline.json",
+        "sha256": "a2e5b33d1e723c9ee0d59cf68bc801c68016d6d757bac94bb4919658c1deb009"
+      },
+      {
+        "path": "config/project-knowledge.json",
+        "sha256": "6d7a9a3e4f76488968c4eb882cf82b28e6f142bc8dd8cd1a4cab656cfe1517bb"
+      },
+      {
+        "path": "src/runtime/direct-run.ts",
+        "sha256": "85c84cad41a915c23c0f9d1f51d34d83e219c0014ba00b2579cde6543693db5e"
+      },
+      {
+        "path": "src/runtime/scene-project-authoring.ts",
+        "sha256": "d73033a0c1acdcd97c193011b32d7c9372b2d2da8a6856ed97815e0a40e2fb5a"
+      },
+      {
+        "path": "src/runtime/project-knowledge.ts",
+        "sha256": "84a729eaf2a4aab6c81953a313a35eab3b49af60aa25cfa80d4b34eab7928ff7"
+      },
+      {
+        "path": "package.json",
+        "sha256": "f0654e0280c08e9ee0a8a77e9769200dc753bad1c09200f42e4cf49fcdf0d1e5"
+      }
+    ]
+  },
+  "ownership": "source project remains read-only; customer runtime must be independent"
+}

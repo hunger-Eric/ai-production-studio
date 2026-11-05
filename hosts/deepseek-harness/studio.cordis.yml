@@ -1,0 +1,15 @@
+- insert:
+    - id: mcp-production-studio
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: studio
+        transport: stdio
+        command: node
+        args:
+          - 'C:/path/to/ai-production-studio/scripts/engine/studio-mcp.mjs'
+          - '--workspace'
+          - 'C:/path/to/customer-obsidian-vault'
+        env:
+          STUDIO_WHISPER_MODEL_PATH: 'C:/path/to/whisper/medium.pt'
+        toolCallTimeoutMs: 660000
+        failOnStartupError: true

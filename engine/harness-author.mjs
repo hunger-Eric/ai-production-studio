@@ -7,7 +7,7 @@ import { check } from './store.mjs';
 
 export const authorRoute = { provider:'openai', model:'gpt-6.1-sol', reasoningEffort:'high' };
 
-export async function invokeHarnessAuthor({ cwd, sessionRoot, attemptDir, prompt, priorSession, retry = false,
+export async function invokeHarnessAuthor({ cwd, sessionRoot, attemptDir, prompt, images = [], priorSession, retry = false,
   saveResponse, timeoutMs = 540_000 }) {
   const command = process.env.STUDIO_HARNESS_COMMAND;
   const entry = process.env.STUDIO_HARNESS_ENTRY;
@@ -76,7 +76,8 @@ export async function invokeHarnessAuthor({ cwd, sessionRoot, attemptDir, prompt
   const timeout=setTimeout(()=>{abort(new Error('Harness ACP 等待超时'));child.kill();},timeoutMs);
   const evidence={host:'DeepSeek Harness ACP',route:authorRoute};
   try {
-    await rpc('initialize',{protocolVersion:1,clientCapabilities:{},clientInfo:{name:'studio-animation',version:'1.0.0'}});
+    const capabilities = await rpc('initialize',{protocolVersion:1,clientCapabilities:{},clientInfo:{name:'studio-animation',version:'1.0.0'}});
+    if (images.length) check(capabilities?.agentCapabilities?.promptCapabilities?.image === true, '当前动画作者不接收静帧输入');
     const opened=priorSession ? await rpc('session/resume',{sessionId:priorSession,cwd,mcpServers:[]}) :
       await rpc('session/new',{cwd,mcpServers:[]});
     const sessionId=priorSession ?? opened.sessionId;
@@ -92,7 +93,7 @@ export async function invokeHarnessAuthor({ cwd, sessionRoot, attemptDir, prompt
     evidence.reasoningSelection=selected.configOptions.find(item=>item.id===effort.id).currentValue;
     await writeFile(join(attemptDir,'prompt-intent.json'),JSON.stringify(evidence),{flag:'wx',flush:true});
     promptSession=sessionId;
-    const result=await rpc('session/prompt',{sessionId,prompt:[{type:'text',text:prompt}]});
+    const result=await rpc('session/prompt',{sessionId,prompt:[{type:'text',text:prompt}, ...images]});
     check(result?.stopReason==='end_turn' && response.trim(), 'Harness 作者未完整交付');
     const visual=JSON.parse(response.trim().replace(/^\x60\x60\x60(?:json)?\s*|\s*\x60\x60\x60$/g,''));
     const completed={ visual, evidence:{ ...evidence, result, trace } };

@@ -17,6 +17,8 @@ DeepSeek Harness 已连接 `studio` MCP 时，先调用 `workspace_info` 核对�
 
 操作者为一个任务开启真实调用后，`author_generate` 执行该任务的初稿和表达编辑。工作区提供 `tts_local` 时，用它配音，传入最终润色稿 SHA 和按语义切分且逐字保留的正文。无本机音色的工作区可在授权后用 `tts_test` 并传入最终润色稿 SHA。拿到真实 WAV 后，沿同一个 run ID 的 `production_next` 工作单继续对齐、画面、混音、预览、审看、交付和反馈。
 
+Harness 的参考驱动正片入口是 `scene_project_*`。对齐后按本片题材查 `scene_style_catalog`，实际用 `scene_style_read` 读取候选原文和可用静帧，再冻结整片画法和分段。同一作者接续各段源码，齐备后统一 Remotion 渲染并进入原制作流程。已交付视频的画面新版沿独立导出入口保留原片。
+
 - 新任务前检查是否已有用户指定的 run。继续任务用 `status` 和 `next`，保留同一个 ID。每阶段实际读 `next` 返回的正文、采纳反馈和上游产物。
 - 对选题、研究、方向负责；实际查阅材料并在研究稿中保留可查来源，不猜测证据、不让后续作者补研究。用 `submit` 提交 Markdown、当前工作单 SHA 和实际来源说明。
 - 初稿、表达编辑只能交给登记 Gemini，不能由宿主默认模型代写。客户明确授权使用自己的 Gemini 账号并完成配置后，才用 `author --allow-network true`。结果不明即停；如果已取得响应，可以用同一阶段参数不带网络许可恢复本地落盘。调用与报告分开。

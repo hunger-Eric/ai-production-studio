@@ -71,7 +71,7 @@ studio feedback --workspace "<客户Vault>" --run "<ID>" --stage edit --node nar
 5. 需要让 MCP 发起真实 Gemini 调用时，操作者在服务启动参数加上 `--authorize-run <已有的正式 run ID>`，并向 MCP 进程提供 `GEMINI_API_KEY`。这样才会出现 `author_generate`，无本机音色时也会出现短口播的 `tts_test`。这两个工具只用于指定任务。
 6. 正式工作区配置 `.dsh/local-voice-profile.json` 后，重新连接会提供 `tts_local` 和 `local_voice_render`。前者绑定冻结稿和 run ID，后者给既有成片生成旁白分段。音色配置引用本机 CUDA Python、模型目录、本人参考录音和逐字稿，跟随个人工作区存放。音色素材和配置不随通用安装包分发。
 7. 制作环节需要 FFmpeg、FFprobe、Python 和本机 Whisper 权重。MCP 进程使用 `STUDIO_WHISPER_MODEL_PATH` 读取权重绝对路径，可用 `STUDIO_MEDIA_PYTHON` 指定 Whisper 和动画渲染所用的 Python 解释器。沿同一个 run ID 读取 `production_next`，依次对齐字幕、登记画面、混音、预览、审看和交付。素材放入当前任务返回的 `inputs` 目录。画面交接要求无声 1080×1920、30fps，每段最多 30 秒。音乐和音效交接使用按整条口播时间轴编排的独立分轨及使用许可。正式审看由负责人记录，技术样片用 `technical_validation`。交付工具生成 MP4、封面与说明，制作反馈写回当前阶段所读节点。
-8. 自动动画作者运行在 DeepSeek Harness ACP。连接参数加 `--animate-run <已授权的任务 ID>` 后，先用 `animation_plan` 冻结连续帧范围，再用 `animation_dispatch` 派发当前段。后续段续接同一 Harness 会话。作者只回传结构化画面数据，工作台在本机渲染。最后用 `animation_commit` 统一合成粗剪。派发结果不明时保留原会话和回执，不自动重发。
+8. 自动动画作者运行在 DeepSeek Harness ACP。连接参数加 `--animate-run <已授权的任务 ID>` 后，可走 [参考驱动的正片制作](https://github.com/hunger-Eric/ai-production-studio/blob/main/docs/scene-project.md)。较早的动画任务继续使用自己的 `animation_plan`、`animation_dispatch` 和 `animation_commit` 入口。
 9. 审看粗剪后，用 `earshot_candidates` 生成实际候选、试听页和本地比较结果，由负责人选择。将候选报告 SHA、选择依据和动作帧交给 `earshot_mix`，再把原生混音回执交给制作声音阶段。需安装与项目锁文件一致的 Earshot、Cinetic 和本地模型缓存。
 10. `publication_prepare` 绑定已经交付的成片与当前发布文案，生成抖音或 B 站的本地提交包。它会实际检查上传器参数和成片清理前后的解码帧，停止在账号检查和提交前。
 

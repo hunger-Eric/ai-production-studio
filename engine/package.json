@@ -8,11 +8,15 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "1.32.2",
+    "@react-three/fiber": "9.4.0",
     "@remotion/bundler": "4.0.532",
     "@remotion/renderer": "4.0.532",
+    "@remotion/three": "4.0.532",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "remotion": "4.0.532",
+    "three": "0.187.0",
+    "typescript": "5.9.3",
     "zod": "4.6.7"
   }
 }

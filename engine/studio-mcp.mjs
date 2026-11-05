@@ -12,6 +12,9 @@ import { animationPlan, animationDispatch, animationDelivery } from './animation
 import { earshotCandidates, earshotMix, earshotPlanInput, earshotMixInput } from './earshot.mjs';
 import { publicationPrepare, publicationInput } from './publication.mjs';
 import { visualTrial, visualTrialInputs } from './visual-reference-trial.mjs';
+import { sceneProjectInputs, sceneStyleList, sceneStyleRead, sceneProjectPlan, sceneProjectNext,
+  sceneProjectStatus, sceneProjectPreview, sceneProjectFrames, sceneProjectExport, sceneProjectCaptionFit,
+  prepareSceneProject } from './scene-production.mjs';
 
 const id = z.string().regex(/^[a-z0-9][a-z0-9-]{0,63}$/);
 const sha = z.string().regex(/^[a-f0-9]{64}$/);
@@ -45,6 +48,7 @@ async function main() {
   if (animationRun) {
     check(workspace.mode === 'production', '夹具仓库禁止真实动画作者请求');
     await studio.loadRun(root, slug(animationRun));
+    await prepareSceneProject(root, animationRun);
   }
   if (authorizedRun) {
     check(workspace.mode === 'production', '夹具仓库禁止真实 Gemini 请求');
@@ -53,12 +57,14 @@ async function main() {
   }
   const server = new McpServer({ name: 'ai-production-studio', version: studio.version });
 
-  function tool(name, description, inputSchema, annotations, execute) {
+  function tool(name, description, inputSchema, annotations, execute, multimodal = false) {
     server.registerTool(name, { description, inputSchema: z.strictObject(inputSchema), annotations }, async args => {
       try {
         const current = await studio.workspaceInfo(root);
         check(current.workspaceId === workspace.workspaceId, '工作区身份已变化，请重新连接');
         const result = await execute(args);
+        if (multimodal) return { content: [{ type: 'text', text: JSON.stringify(result.text) },
+          ...(result.images ?? (result.image ? [result.image] : []))] };
         return { content: [{ type: 'text', text: JSON.stringify(result) }], structuredContent: result };
       } catch (error) {
         return { isError: true, content: [{ type: 'text', text: error.message }] };
@@ -143,6 +149,45 @@ async function main() {
         check(runId === animationRun, '此任务未授权动画作者请求');
         return animationDispatch(root, runId, animationRetry);
       });
+    const active = runId => {
+      check(runId === animationRun, '此任务未授权正式动画作者请求');
+      return runId;
+    };
+    tool('scene_project_inputs', '正式动画入口。读取已对齐口播、原字幕时轴和 Obsidian 动画要求，供你决定整片设计。',
+      run, readOnly, ({ runId }) => sceneProjectInputs(root, active(runId)));
+    tool('scene_style_catalog', '浏览 Obsidian 的画风目录。无 series 时列系列；有 series 时列条目，供你按题材选择。',
+      { series: z.string().max(8).optional() }, readOnly, ({ series }) => sceneStyleList(root, series));
+    tool('scene_style_read', '实际读取候选画风的完整原提示词和可用静帧，按当前任务保存来源和 SHA。',
+      { ...run, key: z.string().max(32) }, { ...writeOnce, openWorldHint: true },
+      ({ runId, key }) => sceneStyleRead(root, active(runId), key), true);
+    tool('scene_project_plan', '登记 Harness 为整片选定的画风、具体设计和分段。已选条目须先实际读取。referenceDecisions 按 styleKeys 顺序记录实际参考的配色与画法，再说明本片需要改动的部分。',
+      { ...run, styleKeys: z.array(z.string().max(32)).min(1).max(3),
+        ends: z.array(z.number().int().positive()).min(1).max(24), design: z.string().min(1).max(12000),
+        referenceDecisions: z.array(z.strictObject({
+          key: z.string().max(32),
+          palette: z.string().trim().min(1).max(1600).describe('按实际静帧记录占画面主要面积的颜色、主体与背景的色彩和明暗关系。无静帧则标明依据为原文。'),
+          appearance: z.string().trim().min(1).max(1600).describe('列出要保留的构图、材质、空间、运动做法，区分实际看到和原文所述。'),
+          changes: z.array(z.string().trim().min(1).max(400)).max(8).describe('写明必须因题材或输出规格改动的地方及原因。没有改动时给空数组。')
+        })).min(1).max(3).optional() },
+      writeOnce, ({ runId, ...choice }) => sceneProjectPlan(root, active(runId), choice));
+    tool('scene_project_status', '查询当前整片的设计、分段源码、统一预览和本地导出。',
+      run, readOnly, ({ runId }) => sceneProjectStatus(root, active(runId)));
+    tool('scene_project_next', '派发当前一个正式动画段。下一段续接同一作者；优先恢复本地完整响应。',
+      run, { ...writeOnce, idempotentHint: false, openWorldHint: true }, ({ runId }) => sceneProjectNext(root, active(runId), true));
+    tool('scene_project_recover', '仅登记本机已有的完整正式动画作者响应。',
+      run, writeOnce, ({ runId }) => sceneProjectNext(root, active(runId), false));
+    tool('scene_project_preview', '待全部段源码保存后统一 Remotion 渲染，并合成原旁白及字幕。',
+      run, writeOnce, ({ runId }) => sceneProjectPreview(root, active(runId)));
+    tool('scene_project_frames', '查看当前整片预览的关键帧与接缝。帧号从 0 开始，返回实际图像。',
+      { ...run, frames: z.array(z.number().int().min(0)).min(1).max(8) },
+      writeOnce, ({ runId, frames }) => sceneProjectFrames(root, active(runId), frames), true);
+    tool('scene_project_caption_fit', '对已交付视频的画面新版复用纯画面，仅调整原字幕样式位置，保留逐字内容及时间轴。',
+      { ...run, previewSha256: sha, marginLeft: z.number().int().min(0).max(360),
+        marginRight: z.number().int().min(0).max(360), marginBottom: z.number().int().min(0).max(720) },
+      writeOnce, ({ runId, ...input }) => sceneProjectCaptionFit(root, active(runId), input));
+    tool('scene_project_export', '给已交付视频的新版预览导出本地 MP4，附真实审看范围。新片沿正式交付入口。',
+      { ...run, previewSha256: sha, observations: z.string().min(1).max(5000) }, writeOnce,
+      ({ runId, ...input }) => sceneProjectExport(root, active(runId), input));
   }
   if (visualRun) {
     tool('visual_trial_inputs', '读取已交付原片的可选段、真实字幕时间轴和当前 Obsidian 动画参考正文。',
